@@ -1,0 +1,51 @@
+{
+"name": "openstudio_results",
+  "display_name": "OpenStudio Results",
+  "description": "This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data.",
+  "modeler_description": "For the most part consumption data comes from the tabular EnergyPlus results, however there are a few requests added for time series results. Space type and loop details come from the OpenStudio model. The code for this is modular, making it easy to use as a template for your own custom reports. The structure of the report uses bootstrap, and the graphs use dimple js.",
+  "class_name": "OpenStudioResults",
+  "version": "1.0.1",
+  "version_modified":"20200624T200801Z",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrel/openstudio-common-measures-gem.git"
+   },
+  "keywords": ["Reporting", "QAQC"],
+  "taxonomy": "Reporting.QAQC",
+  "arguments": [
+  	{
+  		"name": "units",
+  		"display_name": "Which Unit System do you want to use?",
+  		"default_value": "IP",
+  		"required": true,
+  		"type": "Choice"
+  	},
+  	{
+  		"name": "building_summary_section",
+  		"display_name": "Model Summary",
+  		"default_value": true,
+  		"required": true,
+  		"type": "Boolean"
+  	}
+  ],
+  "attributes": [
+  	{
+  		"name": "Measure Type",
+  		"value": "ReportingMeasure",
+  		"datatype": "string"
+  	},
+    {
+      "name": "Intended Software Tool",
+      "value": "OpenStudio Application",
+      "datatype": "string"
+    },
+    {
+      "name": "Intended Software Tool",
+      "value": "Parametric Analysis Tool",
+      "datatype": "string"
+    }
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

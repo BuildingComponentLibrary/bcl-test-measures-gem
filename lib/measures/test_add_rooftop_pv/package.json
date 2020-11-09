@@ -1,0 +1,45 @@
+{
+"name": "add_rooftop_pv",
+  "display_name": "Add Rooftop PV",
+  "description": "This measure will create new shading surface geometry above the roof for each thermal zone inyour model where the surface azmith falls within the user specified range. Arguments are exposed for panel efficiency, inverter efficiency, and the fraction of each roof surface that has PV.",
+  "modeler_description": "The fraction of surface containing PV will not only set the PV properties, but will also change the transmittance value for the shading surface. This allows the measure to avoid attempting to layout the panels. Simple PV will be used to model the PV.",
+  "class_name": "AddRooftopPV",
+  "version": "1.0.1",
+  "version_modified":"20200401T050058Z",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrel/openstudio-common-measures-gem.git"
+   },
+  "keywords": ["Onsite Power Generation","Photovoltaic"],
+  "taxonomy": "Onsite Power Generation.Photovoltaic",
+  "arguments": [
+  	{
+  		"name": "fraction_of_surface",
+  		"display_name": "Fraction of Surface Area with Active Solar Cells",
+  		"default_value": 0.75,
+  		"required": true,
+  		"type": "Double"
+  	},
+  	{
+  		"name": "cell_efficiency",
+  		"display_name": "Cell Efficiency",
+  		"default_value": 0.18,
+  		"required": true,
+  		"type": "Double"
+  	}
+  ],
+  "attributes": [
+  	{
+  		"name": "Measure Type",
+  		"value": "ModelMeasure",
+  		"datatype": "string"
+  	},{
+  		"name": "Intended Software Tool",
+  		"value": "OpenStudio Application",
+  		"datatype": "string"
+  	}
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

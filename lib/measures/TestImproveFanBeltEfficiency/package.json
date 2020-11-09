@@ -1,0 +1,41 @@
+{
+"name": "improve_fan_belt_efficiency",
+  "display_name": "Improve Fan Belt Efficiency",
+  "description": "The assessment team observed opportunities for fan belt improvements on HVAC fan drives. These motors are asynchronous induction motors. Improvements in belt efficiency result in energy savings at the motor. The three common belt efficiency measures are belt tightening (1%-5% savings per motor), replace standard v-belts with cogged v-belts (2% savings per motor), and replace standard belts with synchronous belts (3% savings per motor). Well-adjusted belts run cooler, last longer, and operate at higher efficiency than standard belts. The belts associated with the largest motors, longest run times, and that are run closest to full load should be given priority when making replacements.",
+  "modeler_description": "This measure alters fans on all or a single air loop in the building. The three belt ECMs options are then exposed as three user argument fields with a default populated for each. The range of efficiency improvements will be listed in the user argument description. The three user arguments will be summed and added to the existing motor efficiency. The cost arguments are user arguments that are also populated with a default.  If arguments are left blank, the user is notified that the model has not changed in the run manager. A warning is issued if the motor efficiency >96% and an error is issued if efficiency is >100%.",
+  "class_name": "ImproveFanBeltEfficiency",
+  "version": "1.0.1",
+  "version_modified":"20200229T024321Z",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrel/openstudio-common-measures-gem.git"
+   },
+  "keywords": ["HVAC", "Distribution"],
+  "taxonomy": "HVAC.Distribution",
+  "arguments": [
+  	{
+  		"name": "motor_eff",
+  		"display_name": "Motor Efficiency Improvement Due to Fan Belt Improvements(%).",
+  		"default_value": 3,
+  		"required": true,
+  		"type": "Double"
+  	},
+  	{
+  		"name": "remove_costs",
+  		"display_name": "Remove Baseline Costs From Effected Fans?",
+  		"default_value": false,
+  		"required": true,
+  		"type": "Boolean"
+  	}
+  ],
+  "attributes": [
+  	{
+  		"name": "Measure Type",
+  		"value": "ModelMeasure",
+  		"datatype": "string"
+  	}
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}
