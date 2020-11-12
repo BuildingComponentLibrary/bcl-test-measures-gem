@@ -1,6 +1,6 @@
 # BCL Test Measures Gem
 
-This measure repo is used to test the new BCL codebase and to demonstrate the appropriate structure of measure repos to be added to the BCL.  Measures should be placed in the `lib` directory.
+This measure repo is used to test the new BCL codebase and to demonstrate the appropriate structure of measure repos to be added to the BCL.  Measures should be placed in the `lib/measures` directory.
 
 Measure repositories should be structured as an [OpenStudio extension gem](https://github.com/NREL/openstudio-extension-gem).  Follow the directions to [initialize a new extension gem](https://github.com/NREL/openstudio-extension-gem#initializing-a-new-extension-gem) for your measures and use the rake task to test your measures.  
 
